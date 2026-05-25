@@ -219,7 +219,6 @@ export default function Home() {
             <div className="text-2xl font-bold tracking-[0.18em]">ABE</div>
             <div className="text-xs tracking-[0.35em] text-white/60">SECURITY</div>
           </div>
-          <p className="text-white/50">© 2026 ABE Security. A division of ABE Integrated Solutions.</p>
         </div>
       </footer>
 </main>
