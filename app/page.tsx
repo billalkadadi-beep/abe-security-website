@@ -4,12 +4,24 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const services = [
-    ["Construction Security", "Visible site protection for construction, infrastructure and project environments."],
-    ["Commercial Security", "Professional security for offices, warehouses, retail and commercial premises."],
-    ["Event Security", "Crowd control, access management and event support delivered professionally."],
-    ["Mobile Patrols", "Scheduled patrols and response services for sites requiring after-hours coverage."],
-  ];
+ const services = [
+  [
+    "Residential Security",
+    "Professional security presence for residential buildings, private properties, apartment complexes and communities.",
+  ],
+  [
+    "Retail Security",
+    "Visible, customer-aware security for retail stores, shopping environments and loss prevention support.",
+  ],
+  [
+    "Commercial Security",
+    "Reliable security services for offices, warehouses, business premises and corporate environments.",
+  ],
+  [
+    "Mobile Patrols",
+    "Scheduled patrols and after-hours checks for sites requiring flexible security coverage.",
+  ],
+];
 
   return (
     <main className="min-h-screen bg-[#080A0D] text-white">
