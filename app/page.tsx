@@ -4,7 +4,9 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [expandedCard, setExpandedCard] = useState<number | null>(null);
  const services = [
+  
   [
     "Residential Security",
     "Professional security presence for residential buildings, private properties, apartment complexes and communities.",
@@ -140,11 +142,52 @@ export default function Home() {
           <h2 className="mb-12 text-4xl font-bold">Security Solutions You Can Count On</h2>
 
           <div className="grid gap-6 md:grid-cols-4">
-            {services.map(([title, text]) => (
+            {services.map(([title, text], index) => (
               <div
-                key={title}
-                className="border border-white/10 bg-white/[0.03] p-8 transition hover:-translate-y-1 hover:bg-white/[0.06]"
-              >
+  key={title}
+  onClick={() =>
+    setExpandedCard(expandedCard === index ? null : index)
+  }
+  className="cursor-pointer border border-white/10 bg-white/[0.03] p-8">
+   {expandedCard === index && (
+  <motion.div
+    initial={{ opacity: 0, height: 0 }}
+    animate={{ opacity: 1, height: "auto" }}
+    transition={{ duration: 0.3 }}
+    className="mt-4 border-t border-white/10 pt-4 text-sm text-gray-300"
+  >
+    {title === "Residential Security" && (
+      <p>
+        We prioritise your safety with reliable, professional residential
+        security solutions tailored to your home and family. Your home is our
+        home.
+      </p>
+    )}
+
+    {title === "Retail Security" && (
+      <p>
+        Customer-focused retail security designed to protect staff, customers,
+        stock and shopping environments while maintaining a professional
+        presence.
+      </p>
+    )}
+
+    {title === "Commercial Security" && (
+      <p>
+        Reliable commercial security solutions for offices, warehouses and
+        business premises with a strong focus on professionalism, safety and
+        incident prevention.
+      </p>
+    )}
+
+    {title === "Mobile Patrols" && (
+      <p>
+        Flexible mobile patrol services including scheduled patrols, lock-ups,
+        alarm responses and after-hours site checks across New South Wales.
+      </p>
+    )}
+  </motion.div>
+)}
                 <div className="mb-6 flex gap-1">
                  <Image
   src="/ABE logo.png"
