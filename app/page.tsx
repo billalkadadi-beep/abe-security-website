@@ -8,9 +8,10 @@ export default function Home() {
  const services = [
   
   [
-    "Residential Security",
-    "Professional security presence for residential buildings, private properties, apartment complexes and communities.",
-  ],
+  "Residential Security",
+  "Professional security presence for residential buildings, private property...",
+  "/residential-security",
+],
   [
     "Retail Security",
     "Visible, customer-aware security for retail stores, shopping environments and loss prevention support.",
@@ -142,13 +143,18 @@ export default function Home() {
           <h2 className="mb-12 text-4xl font-bold">Security Solutions You Can Count On</h2>
 
           <div className="grid gap-6 md:grid-cols-4">
-            {services.map(([title, text], index) => (
-              <div
+            {services.map(([title, text, link], index) => (
+<div
   key={title}
-  onClick={() =>
-    setExpandedCard(expandedCard === index ? null : index)
+  onClick={() => {
+  if (link) {
+    window.location.href = link;
+  } else {
+    setExpandedCard(expandedCard === index ? null : index);
   }
+}}
   className="cursor-pointer border border-white/10 bg-white/[0.03] p-8">
+
    {expandedCard === index && (
   <motion.div
     initial={{ opacity: 0, height: 0 }}
