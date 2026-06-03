@@ -6,23 +6,28 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
  const services = [
-  
   [
-  "Residential Security",
-  "Professional security presence for residential buildings, private property...",
-  "/residential-security",
-],
+    "Residential Security",
+    "Professional security presence for residential buildings, private property...",
+    "/residential-security",
+  ],
+
   [
     "Retail Security",
     "Visible, customer-aware security for retail stores, shopping environments and loss prevention support.",
+    "/retail-security",
   ],
+
   [
     "Commercial Security",
     "Reliable security services for offices, warehouses, business premises and corporate environments.",
+    "/commercial-security",
   ],
+
   [
     "Mobile Patrols",
     "Scheduled patrols and after-hours checks for sites requiring flexible security coverage.",
+    "/mobile-patrols",
   ],
 ];
 
