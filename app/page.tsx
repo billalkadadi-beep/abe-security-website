@@ -115,13 +115,13 @@ export default function Home() {
   transition={{ duration: 0.8 }}
   className="max-w-4xl text-4xl md:text-6xl font-bold leading-tight"
 >
-  ABE
+  Security Guards Sydney
   <span className="block text-[#B8BDC3] mt-4 text-2xl md:text-4xl font-medium">
-    Your Security Is Our Business.
+    Concierge, Mobile Patrols & Event Security
   </span>
 </motion.h1>
 <p className="mt-8 max-w-2xl text-lg leading-8 text-white/70">
-  Reliable security services across commercial, construction, retail and event environments.
+  Licensed security guards, concierge services, mobile patrols and event security across Sydney, Balmain, Birchgrove, the Inner West, Ryde and Gladesville.
 </p>
 
 <div className="mt-10 flex flex-col gap-4 sm:flex-row">
