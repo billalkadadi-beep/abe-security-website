@@ -26,7 +26,7 @@ export default function Home() {
 
   [
     "Mobile Patrols",
-    "Scheduled patrols and after-hours checks for sites requiring flexible security coverage.",
+    "Random and scheduled patrols, lock-ups, unlocks, alarm responses and welfare checks for residential and commercial properties.",
     "/mobile-patrols",
   ],
 ];
@@ -152,11 +152,11 @@ export default function Home() {
 <div
   key={title}
   onClick={() => {
-  if (link) {
-    window.location.href = link;
-  } else {
-    setExpandedCard(expandedCard === index ? null : index);
-  }
+  if (title !== "Mobile Patrols" && link) {
+  window.location.href = link;
+} else {
+  setExpandedCard(expandedCard === index ? null : index);
+}
 }}
   className="cursor-pointer border border-white/10 bg-white/[0.03] p-8">
 

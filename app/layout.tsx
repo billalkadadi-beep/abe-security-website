@@ -13,10 +13,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "ABE Security | Licensed Security Services NSW",
+  title: "ABE Security | Security Guards, Concierge & Mobile Patrols Sydney",
   description:
-    "Professional security services across commercial, residential, retail and event environments throughout New South Wales.",
-};
+    "ABE Security provides licensed security guards, concierge services, mobile patrols and event security across Sydney, Balmain, Birchgrove, the Inner West, Ryde, Gladesville and NSW. Contact us for a free quote.",
+}
 
 export default function RootLayout({
   children,
